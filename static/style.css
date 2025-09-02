@@ -1,0 +1,88 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f9fafb;
+  color: #222;
+}
+.landing-bg {
+  background: linear-gradient(120deg, #2563eb 0%, #a855f7 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+.tagline {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.btn-blue {
+  background: #2563eb;
+}
+.btn-green {
+  background: #22c55e;
+}
+.btn-purple {
+  background: #a855f7;
+}
+.btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.22);
+}
+.glow-qr {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  background: url("https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=SmartAttendance")
+    no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 0 40px 20px #2563eb88, 0 0 80px 40px #a855f788;
+  border-radius: 1rem;
+  animation: glow 2s infinite alternate;
+  z-index: 1;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 40px 20px #2563eb88, 0 0 80px 40px #a855f788;
+  }
+  100% {
+    box-shadow: 0 0 60px 30px #2563ebcc, 0 0 100px 50px #a855f7cc;
+  }
+}
